@@ -7,7 +7,7 @@
 #include <random>
 
 Genetic::Genetic() : MatrixApplication(40){
-    width_ = 64;
+    width_ = 384;
     height_ = 64;
     popSize_ = width_ * height_;
 

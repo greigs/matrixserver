@@ -140,7 +140,7 @@ void MatrixApplicationStandalone::renderLoop() {
         renderSyncMutex.unlock();
         auto startTime = micros();
         renderToScreens();
-//      BOOST_LOG_TRIVIAL(warning) << "[Application] rendertime: " << micros()-startTime << " us";
+      BOOST_LOG_TRIVIAL(warning) << "[Application] rendertime: " << micros()-startTime << " us";
     }
 }
 

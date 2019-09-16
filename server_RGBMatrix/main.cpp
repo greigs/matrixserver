@@ -5,7 +5,7 @@
 
 #include <Server.h>
 #include <RGBMatrixRenderer.h>
-#include <SimulatorRenderer.h>
+//#include <SimulatorRenderer.h>
 #include <TcpServer.h>
 
 #include <matrixserver.pb.h>
@@ -106,10 +106,10 @@ int main(int argc, char **argv) {
         screens.push_back(screen);
     }
 
-
+BOOST_LOG_TRIVIAL(info) << "About to set up RGBRenderer";
     auto rendererRGBMatrix = std::make_shared<RGBMatrixRenderer>(screens);
 //    auto rendererSimulator = std::make_shared<SimulatorRenderer>(screens, "10.42.42.69");
-
+BOOST_LOG_TRIVIAL(info) << "About to set up Server";
     Server server(rendererRGBMatrix, serverConfig);
 //    server.addRenderer(rendererSimulator);
 

@@ -29,7 +29,7 @@ bool MatrixApplication::connect(const std::string &serverAddress, const std::str
     auto ipcCon = std::make_shared<IpcConnection>();
     ipcCon->connectToServer("matrixserver");
     connection = ipcCon;
-//    connection = TcpClient::connect(io_context, serverAddress, serverPort);
+    //connection = TcpClient::connect(io_context, serverAddress, serverPort);
 //    connection = UnixSocketClient::connect(io_context, "/tmp/matrixserver.sock");
 
     if (!connection->isDead()) {
