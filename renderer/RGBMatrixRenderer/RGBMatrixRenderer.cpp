@@ -24,17 +24,17 @@ void RGBMatrixRenderer::init(std::vector<std::shared_ptr<Screen>> initScreens) {
 
     rgb_matrix::RGBMatrix::Options RGBmatrixOptions;
     rgb_matrix::RuntimeOptions RGBruntimeOptions;
-    //RGBmatrixOptions.hardware_mapping = "adafruit-hat-pwm";
-    //RGBmatrixOptions.rows = 64;
-    //RGBmatrixOptions.cols = 64; //todo: should be tested -> tested now, no difference
-    // RGBmatrixOptions.chain_length = 3;
+    RGBmatrixOptions.hardware_mapping = "adafruit-hat-pwm";
+    RGBmatrixOptions.rows = 64;
+    RGBmatrixOptions.cols = 64; //todo: should be tested -> tested now, no difference
+    RGBmatrixOptions.chain_length = 6;
     //RGBmatrixOptions.chain_length = 6;
-    //RGBmatrixOptions.parallel = 1;
+    RGBmatrixOptions.parallel = 1;
     RGBmatrixOptions.show_refresh_rate = true;
     //RGBmatrixOptions.pwm_lsb_nanoseconds = 150;
     //RGBmatrixOptions.brightness = globalBrightness;
     //RGBmatrixOptions.led_rgb_sequence = "rgb";
-    //RGBruntimeOptions.gpio_slowdown = 1;
+    RGBruntimeOptions.gpio_slowdown = 1;
     //RGBruntimeOptions.drop_privileges = -1;
 
     rgbMatrix = CreateMatrixFromOptions(RGBmatrixOptions, RGBruntimeOptions);
